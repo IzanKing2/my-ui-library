@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito - Mi Tienda</title>
+    <link rel="stylesheet" href="../../css-global/variables.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <header class="cart-header">
+        <div class="container">
+            <h1>Carrito de Compras</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="cart-grid">
+
+            <!-- Lista de Productos -->
+            <section class="cart-items">
+
+                <!-- Item 1 -->
+                <article class="cart-item">
+                    <div class="item-image">
+                        <!-- Placeholder image -->
+                        <img src="https://placehold.co/100" alt="Producto 1">
+                    </div>
+                    <div class="item-details">
+                        <h3>Auriculares Premium</h3>
+                        <p class="category">Electrónica</p>
+                        <p class="price">$150.00</p>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <input type="text" value="1" readonly>
+                            <button>+</button>
+                        </div>
+                        <button class="btn-remove">Eliminar</button>
+                    </div>
+                </article>
+
+                <!-- Item 2 -->
+                <article class="cart-item">
+                    <div class="item-image">
+                        <img src="https://placehold.co/100" alt="Producto 2">
+                    </div>
+                    <div class="item-details">
+                        <h3>Zapatillas Running</h3>
+                        <p class="category">Deportes</p>
+                        <p class="price">$85.00</p>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <input type="text" value="1" readonly>
+                            <button>+</button>
+                        </div>
+                        <button class="btn-remove">Eliminar</button>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- Resumen de Pedido -->
+            <aside class="cart-summary">
+                <h2>Resumen del Pedido</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>$235.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Envío</span>
+                    <span>Gratis</span>
+                </div>
+                <div class="summary-row">
+                    <span>Impuestos (IVA)</span>
+                    <span>$49.35</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>$284.35</span>
+                </div>
+
+                <a href="#" class="btn-checkout">Proceder al Pago</a>
+            </aside>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

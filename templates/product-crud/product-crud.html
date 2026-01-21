@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="../../css-global/variables.css">
+    <link rel="stylesheet" href="product-crud.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="crud-header">
+            <div>
+                <h1>Productos</h1>
+                <p style="color: var(--text-muted);">Gestiona tu inventario</p>
+            </div>
+            <a href="#" class="btn-primary">
+                <span>+</span> Nuevo Producto
+            </a>
+        </header>
+
+        <!-- Tabla -->
+        <div class="table-container">
+            <table class="crud-table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fila 1 -->
+                    <tr>
+                        <td><img src="https://placehold.co/40" class="product-thumb" alt="Img"></td>
+                        <td><strong>Cámara 4K</strong><br><small style="color: grey;">SKU: CAM-001</small></td>
+                        <td>Electrónica</td>
+                        <td>$450.00</td>
+                        <td>12</td>
+                        <td><span class="status-badge status-active">Activo</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action" title="Editar">✎</button>
+                                <button class="btn-action delete" title="Eliminar">🗑</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Fila 2 -->
+                    <tr>
+                        <td><img src="https://placehold.co/40" class="product-thumb" alt="Img"></td>
+                        <td><strong>Zapatillas Sport</strong><br><small style="color: grey;">SKU: NKE-999</small></td>
+                        <td>Deportes</td>
+                        <td>$85.00</td>
+                        <td>50</td>
+                        <td><span class="status-badge status-active">Activo</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action" title="Editar">✎</button>
+                                <button class="btn-action delete" title="Eliminar">🗑</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Fila 3 -->
+                    <tr>
+                        <td><img src="https://placehold.co/40" class="product-thumb" alt="Img"></td>
+                        <td><strong>Lámpara LED</strong><br><small style="color: grey;">SKU: LMP-300</small></td>
+                        <td>Hogar</td>
+                        <td>$25.00</td>
+                        <td>0</td>
+                        <td><span class="status-badge status-inactive">Agotado</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-action" title="Editar">✎</button>
+                                <button class="btn-action delete" title="Eliminar">🗑</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,67 +1,79 @@
 # My UI Library
 
-**My UI Library** es una colección de componentes y estilos CSS diseñados para facilitar el desarrollo de interfaces web modernas, limpias y responsivas. Este proyecto ofrece una base sólida para construir sitios web con una estética consistente y profesional.
+**My UI Library** es una colección de componentes y plantillas de diseño web modernas, limpias y responsivas. Este repositorio ofrece una base sólida para acelerar el desarrollo de interfaces de usuario, permitiéndote copiar y adaptar secciones completas para tus proyectos personales o comerciales.
 
 ## 🚀 Características Principales
 
-*   **Diseño Modular:** Componentes independientes que se pueden importar según sea necesario.
-*   **Personalizable:** Uso extensivo de variables CSS (`variables.css`) para una fácil adaptación de colores, tipografías y espaciados.
-*   **Sin Dependencias:** CSS puro (Vanilla CSS), sin necesidad de preprocesadores ni librerías JavaScript pesadas.
-*   **Listos para usar:** Incluye plantillas y componentes comunes en desarrollos web.
+*   **Diseño Modular:** Componentes independientes organizados para fácil importación.
+*   **100% Personalizable:** Gestionado centralmente mediante variables CSS CSS (`css-global/variables.css`). Cambia colores, tipografías y espaciados en un solo lugar.
+*   **Sin Dependencias:** Construido con HTML5 y CSS3 puro (Vanilla CSS). No requiere instalación de Node.js, librerías pesadas ni compiladores.
+*   **Plantillas "Premium":** Interfaces completas listas para usar con diseños de alta calidad (Login, Tienda, Carrito, Dashboard).
 
 ## 📂 Estructura del Proyecto
 
-El proyecto está organizado de la siguiente manera:
+La organización de archivos está pensada para ser intuitiva y escalable:
 
-*   `assets/`: Recursos estáticos como imágenes o iconos.
-*   `components/`: Estilos específicos para cada componente de la interfaz.
-    *   `alert-message.css`: Estilos para mensajes de alerta y notificaciones.
-    *   `buttons.css`: Variedad de estilos para botones.
-    *   `card.css`: Componentes de tarjeta para mostrar contenido agrupado.
-    *   `navbar/`: Estilos y estructura para la barra de navegación.
-*   `css-global/`: Estilos generales y variables de configuración.
-    *   `variables.css`: **Archivo principal** de configuración de temas (colores, fuentes, etc.).
-*   `templates/`: Ejemplos de páginas completas pre-maquetadas.
-    *   `cart.html`: Plantilla para un carrito de compras.
-    *   `login.html`: Plantilla para una página de inicio de sesión.
+*   `assets/`: Imágenes, iconos y otros recursos estáticos.
+*   `components/`: Bloques de construcción reutilizables.
+    *   `buttons.css`: Estilos de botones (primarios, secundarios, outline).
+    *   `card.css`: Contenedores tipo tarjeta para productos o contenido.
+    *   `alert-message.css`: Notificaciones y alertas de estado.
+    *   `navbar/`: Barra de navegación responsiva.
+*   `css-global/`: El corazón del diseño.
+    *   `variables.css`: **Archivo Maestro**. Define toda la identidad visual (paleta de colores, fuentes, radios de borde).
+*   `templates/`: Páginas completas listas para copiar y pegar.
+    *   `shop/`: Catálogo de productos con filtros y grid responsive.
+    *   `cart/`: Carrito de compras con resumen de pedido.
+    *   `login/`: Página de autenticación moderna y centrada.
+    *   `product-crud/`: Tabla de gestión de datos (estilo dashboard/administración).
 
 ## 🛠️ Guía de Uso
 
-Para utilizar esta librería en tu proyecto, te recomiendo vincular primero el archivo de variables globales y luego los componentes que necesites en el `<head>` de tu HTML.
-
-Ejemplo básico:
+1.  **Explora las plantillas:** Abre cualquier archivo `.html` dentro de `templates/` en tu navegador para ver el diseño en acción.
+2.  **Integra en tu proyecto:**
+    *   Copia el archivo HTML que necesites.
+    *   Asegúrate de copiar también el archivo CSS específico de la plantilla y el archivo `variables.css`.
+3.  **Enlaza los estilos:**
 
 ```html
-<!-- 1. Variables Globales (Importante: cargar primero) -->
-<link rel="stylesheet" href="css-global/variables.css">
+<!-- 1. Variables Globales (¡Esencial!) -->
+<link rel="stylesheet" href="path/to/css-global/variables.css">
 
-<!-- 2. Componentes (Carga solo lo que necesites) -->
-<link rel="stylesheet" href="components/navbar/navbar.css">
-<link rel="stylesheet" href="components/buttons.css">
-<link rel="stylesheet" href="components/card.css">
+<!-- 2. Estilos específicos de la plantilla (ej. Login) -->
+<link rel="stylesheet" href="path/to/templates/login/login.css">
 ```
 
 ## 🎨 Personalización
 
-Puedes cambiar la apariencia de todos los componentes editando únicamente el archivo `css-global/variables.css`. Aquí puedes definir tu paleta de colores, tamaños de fuente y bordes de manera centralizada.
+Para adaptar el diseño a tu marca, simplemente edita `css-global/variables.css`. Los cambios se reflejarán automáticamente en todos los componentes y plantillas que utilicen estas variables.
 
 ```css
 :root {
-    /* Ejemplo de variables personalizables */
-    --primary-color: #007bff;
-    --font-family-base: 'Inter', sans-serif;
+    /* Identidad de Marca */
+    --primary-color: #667eea;  /* Color principal */
+    --secondary-color: #764ba2; /* Color de acento/gradientes */
+    
+    /* Tipografía */
+    --font-style: 'Inter', sans-serif;
+    
+    /* Interfaz */
+    --border-radius: 12px;
 }
 ```
 
-## 📄 Plantillas Disponibles
+## 📄 Detalle de Plantillas
 
-El proyecto incluye plantillas base para acelerar el desarrollo:
-*   **Login Page:** Un formulario de acceso estilizado (`templates/login.html`).
-*   **Shopping Cart:** Una vista detallada de carrito de compras (`templates/cart.html`).
+### 🛍️ Shop (Tienda)
+Un catálogo atractivo con una sección "Hero" para promociones, barra lateral para filtros (categorías, precios) y una cuadrícula de productos responsive que se adapta a móviles y escritorios.
 
-## 🤝 Contribución
+### 🛒 Cart (Carrito)
+Diseño limpio para revisar compras. Incluye lista de artículos con imágenes, controles de cantidad y una tarjeta de resumen de pedido que se mantiene visible (sticky) al hacer scroll.
 
-Si deseas contribuir a **My UI Library**, siéntete libre de clonar el repositorio, mejorar los estilos existentes o añadir nuevos componentes.
+### 🔐 Login
+Pantalla de acceso minimalista con tarjeta flotante, animaciones de entrada suaves y validación visual de campos.
+
+### 📊 Product CRUD
+Interfaz de administración para gestionar inventario. Presenta una tabla de datos moderna con insignias de estado (badges) y acciones rápidas (editar/eliminar).
 
 ---
-*Documentación generada automáticamente para My UI Library.*
+*Hecho con ❤️ para facilitar el aprendizaje y desarrollo web.*
